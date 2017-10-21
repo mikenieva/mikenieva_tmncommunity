@@ -29,29 +29,31 @@
         <div class="post-content">
             {{content}}
         </div>
+        <div style="
+    border: 1px dotted #eb6869;
+    text-align: center;
+    margin-top: 65px;
+    margin-bottom: 35px;
+">
+            <div id="revue-embed">
+                                            <form action="https://www.getrevue.co/profile/mikenieva/add_subscriber" method="post" id="revue-form" name="revue-form" target="_blank">
+                                                <div class="revue-form-group">
+                                                    <label style="margin: 3em 0 1em 0;" for="member_email">Recibe ideas semanales. Contacta conmigo.</label>
+                                                    <input class="revue-form-field" placeholder="Tu correo electrónico..." type="email" name="member[email]" id="member_email" style="
+    width: 50%;
+    padding: 0 0%;
+    text-align: center;
+    margin-left: 25%;
+">
+                                                    <br>
+                                                </div>
+                                                <div class="revue-form-actions">
+                                                    <input type="submit" value="Suscribirme" name="member[subscribe]" id="member_submit">
+                                                </div>
+                                            </form>
+                                        </div>
+        </div>
     </section>
 
-  {{! Discuss Comment Integration}}
-                    <div class="fb-comments" data-href="{{url absolute="true"}}" data-numposts="15" data-colorscheme="light" data-width="100%"></div>
-
-                     {{! Discuss Comment Integration}}
-                    <section class="post-comment">
-                        <div id="disqus_thread"></div>
-                        <script type="text/javascript">
-                            var disqus_shortname = 'miguelnieva'; // required: replace example with your forum shortname
-                            var disqus_identifier = '{{post.id}}'; // make sure to use the post.id as an identifier, otherwise disqus will use the pages url per default, which might be problematic...
-
-                            /* * * DON'T EDIT BELOW THIS LINE * * */
-                            (function() {
-                                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-                                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-                            })();
-                        </script>
-                        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-                        <a href="http://disqus.com" class="dsq-brlink">Leave a Reply <span class="logo-disqus"></span></a>
-                    </section> <!-- Discuss Comment End -->
-                    
-
-
+    <div class="fb-comments" data-href="{{url absolute="true"}}" data-numposts="15" data-colorscheme="light" data-width="100%"></div>
 {{/post}}                                
