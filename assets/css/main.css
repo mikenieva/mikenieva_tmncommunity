@@ -4078,9 +4078,15 @@
 	font-size: 1.2em;
 }
 
+article span a {
+color: white;
+text-decoration: none;
+border-bottom:none;
+	}
 
 @media screen and (max-width: 480px) {
 	#main > .inner > section.findme {
     display:none;
 }
 }
+
