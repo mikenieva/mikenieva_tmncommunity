@@ -4076,12 +4076,14 @@
 
 .post-content p {
 	font-size: 1.2em;
+	color: #3d4449;
 }
 
 article span a {
-color: white;
-text-decoration: none;
-border-bottom:none;
+	color: white;
+	text-decoration: none;
+	border-bottom:none;
+    font-weight: 100;
 	}
 
 @media screen and (max-width: 480px) {
