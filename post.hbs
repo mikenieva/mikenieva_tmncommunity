@@ -15,11 +15,50 @@
             <meta property="fb:admins" content="mikenieva" />
         {{/contentFor}}
 
-    <section>
-        <header class="main">
-            <h1>{{title}}</h1>
-        </header>
-        <span class="image main"><img src="{{img_url feature_image}}" alt="" /></span>
+    <section style="padding: 2em 0;">
+      <header class="main" style="
+  padding: 160px 0px;
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+  position: relative;
+  margin-bottom: 48px;
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%,rgba(0,0,0,0.8) 100%), url('{{img_url feature_image}}');
+">
+
+          <h1 style="
+  color: #ffffff;
+  text-shadow: 3px 3px 10px #151619;
+  margin: 32px 0px;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+">{{title}}</h1>
+  <date class="category" style="text-align: center;color: white;">
+    <p id="datePost" style="color: white; font-weight: 300;">
+      - {{ date published_at format="DD/MM/YYYY" }}-
+    </p>
+    <script>
+    /* var meses = {
+      'JAN': 'Enero',
+      'FEB': 'Febrero',
+      'MAR': 'Marzo',
+      'APR': 'Abril',
+      'MAY': 'Mayo',
+      'JUN': 'Junio',
+      'JUL': 'Julio',
+      'AUG': 'Agosto',
+      'SEP': 'Septiembre',
+      'OCT': 'Octubre',
+      'NOV': 'Noviembre',
+      'DIC': 'Diciembre',
+    }
+    document.getElementById("datePost").innerHTML = "{{ date published_at format="DD" }} de 'mes' de {{ date published_at format="YYYY" }}";
+    */
+    </script>
+  </date>
+  </header>
+
 
         <div class="block-socialbuttons">
             <div class="socialbutton facebookbutton" style="text-align:center; margin-bottom: 50px; margin-top: 25px;">
@@ -30,15 +69,16 @@
             {{content}}
         </div>
         <div style="
-    border: 1px dotted #eb6869;
-    text-align: center;
-    margin-top: 65px;
-    margin-bottom: 35px;
+        border: 1px solid #eb6869;
+            text-align: center;
+            margin-top: 65px;
+            margin-bottom: 35px;
 ">
             <div id="revue-embed">
                                             <form action="https://www.getrevue.co/profile/mikenieva/add_subscriber" method="post" id="revue-form" name="revue-form" target="_blank">
                                                 <div class="revue-form-group">
-                                                    <label style="margin: 3em 0 1em 0;" for="member_email">Recibe ideas semanales. Contacta conmigo.</label>
+                                                    <label style="margin: 3em 0 0em 0;font-size: 20px;" for="member_email">- Suscríbete aquí -</label>
+                                                    <label style="margin: 0em 0 1em 0;font-weight: 300;font-size: 20px;">Recibe ideas semanales para ser un mejor profesional.</label>
                                                     <input class="revue-form-field" placeholder="Tu correo electrónico..." type="email" name="member[email]" id="member_email" style="
     width: 50%;
     padding: 0 0%;
@@ -56,4 +96,4 @@
     </section>
 
     <div class="fb-comments" data-href="{{url absolute="true"}}" data-numposts="15" data-colorscheme="light" data-width="100%"></div>
-{{/post}}                                
+{{/post}}

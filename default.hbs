@@ -60,9 +60,8 @@
             <div id="wrapper">
 
                 <!-- Main -->
-                    <div id="main">
-                        <div class="inner">
-
+                    <div id="main" style="background-color: rgb(243, 241, 241);">
+                          <div class="inner">
                             <!-- Header -->
                                 <header id="header">
                                     <a href="{{@blog.url}}" class="logo"><strong>Mike</strong> Nieva</a>
@@ -129,7 +128,7 @@
 
                             <!-- Footer -->
                                 <footer id="footer">
-                                    <p class="copyright">&copy; The Mike Nieva Company. 2017.</p>
+                                    <p class="copyright">&copy; Mike Nieva. 2018.</p>
                                 </footer>
 
                         </div>
@@ -152,6 +151,7 @@
             <script src="{{asset "js/util.js"}}"></script>
             <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
             <script src="{{asset "js/main.js"}}"></script>
-
+            <script src="{{asset "js/moment.js"}}"></script>
+            <script>moment.locale('es');</script>
     </body>
 </html>
